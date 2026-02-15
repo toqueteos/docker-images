@@ -17,7 +17,10 @@ jobs:
   build-images:
     strategy:
       matrix:
-        version: [{ tag: "db", context: "./db/" }]
+        version: [
+          { tag: "db", context: "./db/" },
+          { tag: "dbmate", context: "./dbmate/" }
+        ]
 
     name: "image ${{ matrix.version.tag }}"
     runs-on: ubuntu-latest
